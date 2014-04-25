@@ -1,5 +1,9 @@
 {-# LANGUAGE OverloadedStrings #-}
-module PHPSerialize where
+module PHPSerialize (
+    PHPVal(..)
+  , serialize
+  , unserialize
+  ) where
 
 import Control.Applicative
 import Data.Attoparsec.Text
