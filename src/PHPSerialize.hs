@@ -10,14 +10,13 @@ import Data.Attoparsec.Text
 import qualified Data.Text as T
 
 
-data PHPVal =
-    PHPNull
-  | PHPBool Bool
-  | PHPInt Int
-  | PHPDouble Double
-  | PHPString T.Text
-  | PHPArr [(PHPVal, PHPVal)]  
-  deriving (Eq, Ord, Show)
+data PHPVal = PHPNull
+            | PHPBool Bool
+            | PHPInt Int
+            | PHPDouble Double
+            | PHPString T.Text
+            | PHPArr [(PHPVal, PHPVal)]  
+            deriving (Eq, Ord, Show)
 
 
 pNull :: Parser PHPVal
