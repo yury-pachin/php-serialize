@@ -85,7 +85,3 @@ serialize (PHPDouble d)   = T.concat ["d:", T.pack $ show d, ";"]
 serialize (PHPString s)   = T.concat ["s:", T.pack $ show $ T.length s, ":\"", s, "\";"]
 serialize (PHPArr a)      = T.concat ["a:", T.pack $ show $ length a, ":{", arr, "}"]
   where arr = foldl (\s (k, v) -> T.concat [s, serialize k, serialize v]) "" a
-
-
-
-
